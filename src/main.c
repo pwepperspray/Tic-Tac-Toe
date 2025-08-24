@@ -90,12 +90,14 @@ void run_game(char p1, char p2){
         }
 
         if(check_win(p1)){
+            display();
             printf("Player %c has Won!", p1);
             getch();
             break;
         }
 
         if(is_grid_full()){
+            display();
             printf("Grid is full! NOBODY WINS!");
             getch();
             break;
@@ -118,12 +120,14 @@ void run_game(char p1, char p2){
         }
 
         if(check_win(p2)){
+            display();
             printf("Player %c has Won!", p1);
             getch();
             break;
         }
 
         if(is_grid_full()){
+            display();
             printf("Grid is full! NOBODY WINS!");
             getch();
             break;
@@ -175,7 +179,7 @@ int is_grid_full(){
         }
     }
 
-    if(count < 9){
+    if(count == 9){
         return 1;
     }
 
